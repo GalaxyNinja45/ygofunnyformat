@@ -1,0 +1,21 @@
+{
+  "banned": [
+    {
+      "name": "Pot of Greed",
+      "reason": "Draw 2? Absolutely not."
+    }
+  ],
+  "limited": [
+    {
+      "name": "Reinforcement of the Army",
+      "reason": "Just one copy for consistency."
+    }
+  ],
+  "semi_limited": [],
+  "suspect": [
+    {
+      "name": "Cyber-Stein",
+      "reason": "We're watching you..."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset = "UTF-8">
+    <title></title>    
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+    <nav>
+        <button onlick = "showtab('home')">Home</button>
+        <button onlick = "showtab('Banlist')">Banlist</button>
+        <button onlick = "showtab('Funnies')">Funnies</button>
+    </nav>
+
+    <main>
+        <section id = "home" class = "tab active">
+            <h1>Funny Format Official Site</h1>
+            <p>Regular Yu-Gi-Oh is sweaty and cringe so we banned handtraps and intentionally play bad decks in order to enjoy the game.</p>
+        </section>
+
+        <section id = "banlist" class = "tab">
+            <h2>Banlist</h2>
+            <div id = "banlist-contect"></div>
+        </section>
+
+        <section id = "funnies" class = "tab">
+            <h2>Funnies</h2>
+            <div id = "funny-cards"></div>
+        </section>
+    </main>
+
+    <script src = "script.js"></script>
+</body>    
+
+</html>
