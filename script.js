@@ -69,7 +69,7 @@ async function loadBanlist() {
 
 //Funny One Ofs
 async function loadFunnyList() {
-  const container = document.getElementById('funny-content');
+  const container = document.getElementById('funny-cards');
   const res = await fetch('funnies.json');
   const funnyCards = await res.json();
 
