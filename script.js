@@ -1,13 +1,26 @@
-function showtab(tabId){
-    document.querySelectorAll('.tab').forEach(tab => {
-        tab.classList.remove('active');
-    });
-    document.getElementbyId(tabId).classList.add('active');
+function showTab(tabId) {
+  console.log(`Switching to tab: ${tabId}`);
+  document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+  const target = document.getElementById(tabId);
+  if (target) {
+    target.classList.add('active');
+  } else {
+    console.error(`Tab with ID "${tabId}" not found.`);
+  }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    loadBanlist();
-    loadFunnyList();
+    console.log("Page loaded, loading content...");
+
+    document.querySelectorAll("nav button").forEach(button => {
+        button.addEventListener("click", () => {
+        const tab = button.getAttribute("data-tab");
+        showTab(tab);
+    });
+  });
+
+  loadBanlist().catch(console.error);
+  loadFunnyList().catch(console.error);
 });
 
 async function fetchCardImage(cardName){
