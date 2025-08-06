@@ -70,21 +70,11 @@ async function loadBanlist() {
 //Funny One Ofs
 async function loadFunnyList() {
   const container = document.getElementById('funny-cards');
-  if (!container) {
-    console.error("Could not find funny-content container.");
-    return;
-  }
+  const res = await fetch('funnies.json');
+  const funnyCards = await res.json();
 
-  try {
-    const res = await fetch('funnies.json');
-    const funnyCards = await res.json();
-
-    for (const card of funnyCards) {
-      const cardElement = await createCardElement(card);
-      container.appendChild(cardElement);
-    }
-  } catch (err) {
-    console.error("Failed to load funny cards", err);
+  for (const card of funnyCards) {
+    const cardElement = await createCardElement(card);
+    container.appendChild(cardElement);
   }
 }
-
